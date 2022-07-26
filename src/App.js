@@ -1,7 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 
 function App() {
+
+  const link = "https://api.thedragonofthe.rest/quote"
+  const [ data, setData ] = useState ( " " );
+
+  useEffect ( ( ) => {
+    axios 
+      .get( link )
+      .then( ( res ) => setData( res ) ) 
+  },[])
+
+  console.log(data)
+
   return (
     <div className="App">
       <header className="App-header">
@@ -15,7 +29,8 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+         <h1> {data.data.quote} </h1>
+         <h1> testing </h1>
         </a>
       </header>
     </div>
