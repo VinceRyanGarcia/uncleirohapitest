@@ -17,6 +17,10 @@ function App() {
 
   // console.log(data)
 
+  function refreshPage() {
+    window.location.reload(false);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -31,7 +35,11 @@ function App() {
           rel="noopener noreferrer"
         >
           "{data.data?.quote}"
+        {/* optional chaining */}
         </a>
+      <div>
+        <button onClick={refreshPage}>Reload</button>
+      </div>
       </header>
     </div>
   );
