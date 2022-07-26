@@ -30,7 +30,7 @@ function App() {
           rel="noopener noreferrer"
         >
          <h1> {data.data.quote} </h1>
-         <h1> testing </h1>
+         <h1> testing xd </h1>
         </a>
       </header>
     </div>
